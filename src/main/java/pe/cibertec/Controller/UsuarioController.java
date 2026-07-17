@@ -10,11 +10,11 @@ import java.util.List;
 
 @RestController
 @RequestMapping("/api/usuarios")
-public class UsiarioController {
+public class UsuarioController {
     private final UsuarioRepository usuarioRepository;
 
-    //Constructur para inicializar repository
-    public UsiarioController(UsuarioRepository usuarioRepository) {
+    //Constructor para inicializar repository
+    public UsuarioController(UsuarioRepository usuarioRepository) {
         this.usuarioRepository = usuarioRepository;
     }
 
@@ -28,7 +28,7 @@ public class UsiarioController {
 
     // Funcion para mopstrar todos los usuarios registrados
     @GetMapping
-    public List<Usuario> listar(UsuarioRepository usuarioRepository){
+    public List<Usuario> listar(){
         return usuarioRepository.findAll();
     }
 }
